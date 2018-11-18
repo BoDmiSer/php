@@ -67,7 +67,6 @@
 		{
 			$array_new[] =array();
 			$i = 0;
-			$count = 0;
 			if (!(count($a) % 3))
 			{	
 				$k = 0;		
@@ -88,7 +87,7 @@
 				return "Массив не кратен 3";
 			}
 		}
-		$array = array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,1,2,3);
+		$array = array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,1,2,3,14,15,16);
 		$array_new = createTrapeze($array);
 		print_r($array_new);
 		echo("<br><br>");
@@ -140,7 +139,7 @@
 		echo("5 Задание"."<br>");
 		function getMin($a)
 		{
-			$i = 0;
+
 			$min = reset($a);
 			foreach ($a as $key => $value)
 			{
