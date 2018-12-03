@@ -102,7 +102,7 @@
                             echo "New record created successfully";
                         }else
                         {
-                           // var_dump($mysqli->error_list);
+                           var_dump($mysqli->error_list);
                         }
                     }
                 }
@@ -167,18 +167,6 @@
             echo "Исключение: ", $e2->getMessage(),"\n";
         }
 
-      /*  $domtree = new DOMDocument('1.0','UTF-8');
-        $xmlRoot = $domtree->createElement("xml");
-        $xmlRoot = $domtree->appendChild($xmlRoot);
-        $currentTrack = $domtree->createElement("track");
-        $currentTrack = $xmlRoot->appendChild($currentTrack);
-        $currentTrack->appendChild($domtree->createElement('path','song1.mp3'));
-        $currentTrack->appendChild($domtree->createElement('title','title of song1.mp3'));
-        $currentTrack->appendChild($domtree->createElement('path','song2.mp3'));
-        $currentTrack->appendChild($domtree->createElement('title','title of song2.mp3'));
-
-    /* get the xml printed */
-    /* echo $domtree->saveXML();*/
     function exportXml($a)
     {
 
@@ -203,8 +191,6 @@
         $domtree = new DOMDocument('1.0','UTF-8');
         $xmlRoot = $domtree->createElement("РАЗДЕЛЫ");
         $xmlRoot = $domtree->appendChild($xmlRoot);
-//        $currentTrack = $domtree->createElement("РАЗДЕЛ");
-//        $currentTrack = $xmlRoot->appendChild($currentTrack);
         $query = "SELECT `test_samson`.a_category.код FROM `a_category`";
         $newcode = $mysqli->query($query);
         while($row = mysqli_fetch_array($newcode))
